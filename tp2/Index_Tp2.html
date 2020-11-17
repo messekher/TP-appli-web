@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<head> <!-- element contenant les metas data -->
+    <meta charset="UTF-8"> <!-- type de codage -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge"> <!-- compatibilité navigateur -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- pour adapter l'affichage a l'ecran -->
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- link: lier la page a un document externe -->
+    <!-- rel: relation avec le document lié -->
+    <!-- type de document lié (media) -->
+    <!-- href: nom du document source -->
+
+    <script type="text/javascript" src="index.js"></script>
+    <!-- script: lier la pager a un scripte -->
+    <!-- type de document lié (media) -->
+    <!-- src: nom du document source -->
+    <title>TP2</title> <!-- titre du document a afficher dans le navigateur -->
+   <h1> Saisaie d'une fiche "personne"</h1> <!-- titre 1 -->
+</head>
+
+  <body> <!-- corp de la page -->
+
+      <form action="action_page.php" method="post"> <!-- pour la collection des info entrés par l'utilisateur et affichage de message-->
+
+         <label for="Name"> Nom </label>
+         <!-- label etiquette pour la valeur Name -->
+         <input type="text" placeholder=" ex: MESSEKHER" minlength="5"maxlength="20" id="Name"  name="Name" >
+         <!-- input: pour collecter des info -->
+         <!-- type: le type de l'input (media)-->
+         <!-- placeholder exemple ecrit sur le champ a remplir -->
+         <!-- min/maxlenght longeure min/max du texte entré -->
+         <!-- id: unique pour definir un element et utilisable par javascript-->
+
+         <br><br> <!-- saut de ligne -->
+         <label for="First_Name"> Prénom 1</label>
+         <input type="text" placeholder="Mohamed" id="First_Name"  name="First_Name" minlength="5" maxlength="20">
+
+         <label for="Midle_Name"> Prénom 2 </label>
+         <input type="text" placeholder="Anis"  maxlength="20"id="Midle_Name"  name="Midle_Name">
+
+         <br><br>
+         <label for="Sexe">Sexe</label>
+         <select name="sexe" id="sexe"> <!-- pour creer une liste de defilement -->
+             <option value="Homme">Homme</option>
+             <option value="Femme">Femme</option>
+             <option value="Femme">Autre</option>
+         </select>
+
+         <br><br>
+
+         <label for="Birthdate"> Date de naissance </label>
+         <input type="Date" placeholder="JJ/MM/AAAA" id="Birthdate"  name="Birthdate" >
+
+
+         <br><br>
+         <label for="Adress"> Adresse </label>
+         <input type="text"  placeholder="Paris" maxlength="50" id="Adress"  name="Adress" >
+         
+		 <br><br>
+		 <label for="Phone">Téléphone:</label>
+         <input type="tel" id="Phone" name="Phone" placeholder="0612-34-56-78" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}-[0-9]{2}"> <!-- pattern: pour definir les nombres a entrer et leurs nombres -->
+
+         <br><br>
+         <label for="Email"> E-Mail </label>
+         <input type="email"  placeholder="ex: nom@mail.fr" maxlength="30" id="Email" name="Email" >
+
+
+         <br><br>
+         <input type="button" id="valider" value="valider" onclick="validation()">
+        </form>
+
+    </body>
+
+</html>
